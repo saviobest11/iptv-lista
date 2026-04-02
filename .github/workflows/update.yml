@@ -1,0 +1,26 @@
+name: Update IPTV list
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # cada 6 horas
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Download IPTV list
+        run: |
+          curl -L "https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u" -o lista.m3u
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "saviobest11"
+          git config --global user.email "bot@github.com"
+          git add lista.m3u
+          git commit -m "update lista" || echo "no changes"
+          git push
