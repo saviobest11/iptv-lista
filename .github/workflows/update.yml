@@ -1,9 +1,9 @@
-name: Update All IPTV Lists
+name: Update IPTV list from ZeroNet
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Se actualiza solo cada 6 horas
-  workflow_dispatch:      # Permite darle al botón de actualizar a mano
+    - cron: '0 */6 * * *'  # Se actualiza cada 6 horas
+  workflow_dispatch:      # Botón para actualizar a mano
 
 jobs:
   update:
@@ -13,18 +13,16 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Download Lists
+      - name: Download from ZeroNet Proxy
         run: |
-          # Tarea 1: Descargar la lista de siempre (IPFS)
-          curl -L "https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u" -o lista.m3u
-          
-          # Tarea 2: Descargar la lista nueva de ZeroNet (vía Proxy)
-          curl -L "https://zeronet.dog/1JKe3VPvFe35bm1aiHdD4p1xcGCkZKhH3Q/content.json" -o lista_zero.m3u
+          # Intentamos bajar la lista usando el proxy público de ZeroNet
+          # He añadido "hashes.m3u" que suele ser el nombre estándar en ese sitio
+          curl -L "https://0net.io/1JKe3VPvFe35bm1aiHdD4p1xcGCkZKhH3Q/hashes.m3u" -o lista_zero.m3u
 
-      - name: Commit and Push
+      - name: Commit changes
         run: |
           git config --global user.name "saviobest11"
           git config --global user.email "bot@github.com"
-          git add lista.m3u lista_zero.m3u
-          git commit -m "Actualizadas ambas listas: IPFS y ZeroNet" || echo "Sin cambios"
+          git add lista_zero.m3u
+          git commit -m "update zeronet list" || echo "no changes"
           git push
