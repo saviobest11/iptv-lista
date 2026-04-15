@@ -2,7 +2,7 @@ name: Update All IPTV Lists
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Se actualiza cada 6 horas
+    - cron: '0 * * * *'  # SE ACTUALIZA CADA HORA
   workflow_dispatch:      # Botón para actualizar a mano
 
 jobs:
@@ -18,13 +18,16 @@ jobs:
           # 1. Lista normal (IPFS)
           curl -L "https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u" -o lista.m3u
           
-          # 2. Lista ZeroNet (vía Proxy)
+          # 2. Lista ZeroNet (vía Proxy) - En espera
           curl -L "https://0net.io/1JKe3VPvFe35bm1aiHdD4p1xcGCkZKhH3Q/hashes.m3u" -o lista_zero.m3u
+
+          # 3. Nueva Lista: NEWERA (URL corregida según tu captura)
+          curl -L "https://ipfs.io/ipns/k2k4r8lm8tkmuxbc8lkmq1in3v0oya1p6pe9o5bu0hu30br5ko08k2gb/data/listas/lista_fuera_iptv.m3u" -o newera.m3u
 
       - name: Commit changes
         run: |
           git config --global user.name "saviobest11"
           git config --global user.email "bot@github.com"
-          git add lista.m3u lista_zero.m3u
-          git commit -m "update lists: ipfs and zeronet" || echo "no changes"
+          git add lista.m3u lista_zero.m3u newera.m3u
+          git commit -m "Actualización horaria: Incluida NEWERA corregida" || echo "no changes"
           git push
