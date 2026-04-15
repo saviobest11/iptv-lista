@@ -1,4 +1,4 @@
-name: Update IPTV list from ZeroNet
+name: Update All IPTV Lists
 
 on:
   schedule:
@@ -13,16 +13,18 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Download from ZeroNet Proxy
+      - name: Download Lists
         run: |
-          # Intentamos bajar la lista usando el proxy público de ZeroNet
-          # He añadido "hashes.m3u" que suele ser el nombre estándar en ese sitio
+          # 1. Lista normal (IPFS)
+          curl -L "https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u" -o lista.m3u
+          
+          # 2. Lista ZeroNet (vía Proxy)
           curl -L "https://0net.io/1JKe3VPvFe35bm1aiHdD4p1xcGCkZKhH3Q/hashes.m3u" -o lista_zero.m3u
 
       - name: Commit changes
         run: |
           git config --global user.name "saviobest11"
           git config --global user.email "bot@github.com"
-          git add lista_zero.m3u
-          git commit -m "update zeronet list" || echo "no changes"
+          git add lista.m3u lista_zero.m3u
+          git commit -m "update lists: ipfs and zeronet" || echo "no changes"
           git push
