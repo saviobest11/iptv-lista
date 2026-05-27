@@ -84,8 +84,6 @@ acestream://e541a954465df29ccce4d829529d983ffb2803d4
 #EXTINF:-1 tvg-logo="https://i.ibb.co/M6h4Qyd/euro2.png" tvg-id="Eurosport 2" group-title="EUROSPORT", EUROSPORT 2 --> ELCANO
 acestream://7152d5f5fdb2184c88c2bb433d8b8f619cdc16b2
 #EXTINF:-1 tvg-logo="https://i.ibb.co/M6h4Qyd/euro2.png" tvg-id="Eurosport 2" group-title="EUROSPORT", EUROSPORT 2 --> ELCANO
-acestream://c6180a86440004748e2abe34d6f31eed8a218a3a
-#EXTINF:-1 tvg-logo="https://i.ibb.co/M6h4Qyd/euro2.png" tvg-id="Eurosport 2" group-title="EUROSPORT", EUROSPORT 2 --> ELCANO
 acestream://f5908690485ae2facecf3074446ba4315f07a193
 #EXTINF:-1 tvg-logo="https://i.ibb.co/M6h4Qyd/euro2.png" tvg-id="Eurosport 2" group-title="EUROSPORT", EUROSPORT 2 HD --> NEW LOOP
 acestream://088aea0c1509c5324f5ec6b9b6ff17ef2c231420
@@ -461,8 +459,6 @@ acestream://739792a3225e5eb3056f4faa7b1137c7f161f23c
 acestream://8f59ce96e4c902ba2f5193af07546d7ff17fc3bc
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Esport3 SDp ** --> ELCANO
 acestream://ed6524f8f73c30cf102fde66f2cb520f4b5842e3
-#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Isle of Man TT ** --> ELCANO
-acestream://6fab41ee3056c0324a43109367a5a23996719c5b
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Magenta Sport 1 HD (DE) --> SPORT TV
 acestream://501141c649a2b78c4965cbf3257224181cc55072
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Magenta Sport 2 HD (DE) --> SPORT TV
