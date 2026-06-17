@@ -565,6 +565,10 @@ acestream://7cf306fc097deca7005b220b1f6206bd654b5ca5
 acestream://584e20154750a15d14cb59953bb9cdd923c331bb
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Dazn Mundial 4 ** --> ELCANO
 acestream://aab0be9632ef2f53e99f2e596a8e6a30ed34a29c
+#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Direct Sport 1 FHDp ** --> ELCANO
+acestream://1b25b195b1b84d4b96830410657718e9e275ad49
+#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Direct Sport 2 FHDp ** --> ELCANO
+acestream://0d780c1fb5fdf2121d9544f1a6892cb1053dd061
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Direct Sport FHDp ** --> ELCANO
 acestream://79e6e01eb3db42e3da2428895181c0d32e4abd1f
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Esport3 SDp * --> ELCANO
@@ -573,8 +577,6 @@ acestream://739792a3225e5eb3056f4faa7b1137c7f161f23c
 acestream://ed6524f8f73c30cf102fde66f2cb520f4b5842e3
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Film+ HD --> NEW LOOP
 acestream://ec7aeef5723f654ee705a192bdcf4eff2fc7c311
-#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Football World Cup FHDp ** --> ELCANO
-acestream://868dda4f1fba69b9a1a1c920d765c09bdf3a9998
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Fox Sport FHDp ** --> ELCANO
 acestream://91826b587ffc2a94dcb104928fca7a33ae6b4ce9
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", M+ CINE ESPAnOL HD Spain --> NEW LOOP
